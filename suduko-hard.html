@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Suduko</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='suduko.css'>
+    <link rel="icon" href="https://cdn.vectorstock.com/i/1000x1000/88/68/sudoku-icon-vector-10788868.webp" type="image/icon">
+</head>
+<body> <div id="difB">
+    
+     
+   <p>Change Difficulty:</p>
+   <button onclick="easD()" id="difE">Easy</button> 
+      <button onclick="meD()" id="difBUM">Medium </button>   
+      <button onclick="haD()" id="difBUH">Hard </button> 
+      <h1 id="header">Sudoku</h1> 
+    </div>
+    <hr>
+     <div id="boardeasy">
+  <span id="misD"><p>Mistakes:</p> <br> <input id="count" type="text" disabled value=0></span>
+   
+  <table id="table">
+    <tr>
+        <td><input class="first" id="i0j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i0j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i0j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i0j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i0j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i0j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i0j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i0j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i0j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="i1j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i1j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i1j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i1j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i1j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i1j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i1j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i1j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i1j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="i2j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i2j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i2j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i2j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i2j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i2j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i2j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i2j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i2j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="i3j0" type="number" value="" maxlength="1"></td>
+        <td><input  id="i3j1" type="number" value="" maxlength="1"></td>
+        <td><input  id="i3j2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i3j3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i3j4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i3j5" type="number" value="" maxlength="1"></td>
+        <td><input  id="i3j6" type="number" value="" maxlength="1"></td>
+        <td><input  id="i3j7" type="number" value="" maxlength="1"></td>
+        <td><input  id="i3j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="i4j0" type="number" value="" maxlength="1"></td>
+        <td><input  id="i4j1" type="number" value="" maxlength="1"></td>
+        <td><input  id="i4j2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i4j3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i4j4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i4j5" type="number" value="" maxlength="1"></td>
+        <td><input  id="i4j6" type="number" value="" maxlength="1"></td>
+        <td><input  id="i4j7" type="number" value="" maxlength="1"></td>
+        <td><input  id="i4j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="i5j0" type="number" value="" maxlength="1"></td>
+        <td><input  id="i5j1" type="number" value="" maxlength="1"></td>
+        <td><input  id="i5j2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i5j3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i5j4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i5j5" type="number" value="" maxlength="1"></td>
+        <td><input  id="i5j6" type="number" value="" maxlength="1"></td>
+        <td><input  id="i5j7" type="number" value="" maxlength="1"></td>
+        <td><input  id="i5j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="i6j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i6j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i6j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i6j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i6j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i6j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i6j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i6j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i6j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="i7j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i7j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i7j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i7j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i7j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i7j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i7j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i7j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i7j8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="i8j0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i8j1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i8j2" type="number" value="" maxlength="1"></td>
+        <td><input id="i8j3" type="number" value="" maxlength="1"></td>
+        <td><input id="i8j4" type="number" value="" maxlength="1"></td>
+        <td><input id="i8j5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i8j6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i8j7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="i8j8" type="number" value="" maxlength="1"></td>
+    </tr>
+</table>
+<button onclick="sudokuSH()" class="bu">Finish Game</button>
+<button onclick="news()" class="bu">New game</button>
+    </div>
+   
+   
+
+     <script src='suduko-h.js'></script>
+</body>
+</html>

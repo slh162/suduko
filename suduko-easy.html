@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Suduko</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='suduko.css'>
+    <link rel="icon" href="https://cdn.vectorstock.com/i/1000x1000/88/68/sudoku-icon-vector-10788868.webp" type="image/icon">
+</head>
+<body> <div id="difB">
+    
+     
+   <p>Change Difficulty:</p>
+   <button onclick="easD()" id="difE">Easy</button> 
+      <button onclick="meD()" id="difBUM">Medium </button>   
+      <button onclick="haD()" id="difBUH">Hard </button> 
+      <h1 id="header">Sudoku</h1> 
+    </div>
+    <hr>
+     <div id="boardeasy">
+  <span id="misD"><p>Mistakes:</p> <br> <input id="count" type="text" disabled value=0></span>
+   
+  <table id="table">
+    <tr>
+        <td><input class="first" id="o0p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o0p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o0p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o0p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o0p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o0p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o0p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o0p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o0p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="o1p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o1p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o1p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o1p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o1p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o1p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o1p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o1p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o1p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="o2p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o2p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o2p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o2p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o2p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o2p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o2p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o2p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o2p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="o3p0" type="number" value="" maxlength="1"></td>
+        <td><input  id="o3p1" type="number" value="" maxlength="1"></td>
+        <td><input  id="o3p2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o3p3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o3p4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o3p5" type="number" value="" maxlength="1"></td>
+        <td><input  id="o3p6" type="number" value="" maxlength="1"></td>
+        <td><input  id="o3p7" type="number" value="" maxlength="1"></td>
+        <td><input  id="o3p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="o4p0" type="number" value="" maxlength="1"></td>
+        <td><input  id="o4p1" type="number" value="" maxlength="1"></td>
+        <td><input  id="o4p2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o4p3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o4p4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o4p5" type="number" value="" maxlength="1"></td>
+        <td><input  id="o4p6" type="number" value="" maxlength="1"></td>
+        <td><input  id="o4p7" type="number" value="" maxlength="1"></td>
+        <td><input  id="o4p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="o5p0" type="number" value="" maxlength="1"></td>
+        <td><input  id="o5p1" type="number" value="" maxlength="1"></td>
+        <td><input  id="o5p2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o5p3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o5p4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o5p5" type="number" value="" maxlength="1"></td>
+        <td><input  id="o5p6" type="number" value="" maxlength="1"></td>
+        <td><input  id="o5p7" type="number" value="" maxlength="1"></td>
+        <td><input  id="o5p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="o6p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o6p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o6p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o6p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o6p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o6p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o6p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o6p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o6p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="o7p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o7p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o7p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o7p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o7p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o7p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o7p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o7p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o7p8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="o8p0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o8p1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o8p2" type="number" value="" maxlength="1"></td>
+        <td><input id="o8p3" type="number" value="" maxlength="1"></td>
+        <td><input id="o8p4" type="number" value="" maxlength="1"></td>
+        <td><input id="o8p5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o8p6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o8p7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="o8p8" type="number" value="" maxlength="1"></td>
+    </tr>
+</table>
+         
+<button onclick="sudokuSE()" class="bu">Finish Game</button>
+<button onclick="news()" class="bu">New game</button>
+    </div>
+   
+   
+
+     <script src='suduko-h.js'></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+table {
+  border: 2px solid #000000;
+  border-collapse: collapse;
+}
+#mes{visibility: hidden;}
+#header {
+  text-align: center;
+  margin-left: 300px;
+}
+
+#boardeasy {
+  margin-left: 380px;
+}
+
+#count {
+  width: 40px;
+  height: 20px;
+  margin-top: 13px;
+  color: red;
+  background-color: rgb(101, 116, 128);
+}
+
+#misD {
+  display: flex;
+}
+
+td {
+  border: 2px solid #000000;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.first {
+  background-color: rgb(197, 202, 202);
+}
+
+input {
+  color: #000000;
+  text-align: center;
+  width: 40px;
+  height: 36px;
+  font-size: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* medium difficulty button design */
+#difBUM {
+  background-color: rgb(69, 69, 171);
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-left: 2px;
+  border: none;
+
+}
+/* hard difficulty button design */
+#difBUH {
+  background-color: red;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-left: 2px;
+  border: none;
+
+}
+/* easy difficulty button design */
+#difE {
+  background-color: green;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-left: 2px;
+  border: none;
+}
+
+#difB {
+  display: flex;
+}
+/* finish and new game button designs*/
+.bu {
+  background-color: #4da6a3;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.bu:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Suduko</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='suduko.css'>
+    <link rel="icon" href="https://cdn.vectorstock.com/i/1000x1000/88/68/sudoku-icon-vector-10788868.webp" type="image/icon">
+</head>
+<body> <div id="difB">
+    
+     
+   <p>Change Difficulty:</p>
+   <button onclick="easD()" id="difE">Easy</button> 
+      <button onclick="meD()" id="difBUM">Medium </button>   
+      <button onclick="haD()" id="difBUH">Hard </button> 
+      <h1 id="header">Sudoku</h1> 
+    </div>
+    <hr>
+     <div id="boardeasy">
+  <span id="misD"><p>Mistakes:</p> <br> <input id="count" type="text" disabled value=0> <p id="mes">Faliure, Try Agian </p></span>
+   
+  <table id="table">
+    <tr>
+        <td><input class="first" id="r0k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r0k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r0k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r0k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r0k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r0k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r0k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r0k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r0k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="r1k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r1k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r1k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r1k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r1k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r1k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r1k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r1k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r1k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="r2k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r2k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r2k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r2k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r2k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r2k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r2k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r2k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r2k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="r3k0" type="number" value="" maxlength="1"></td>
+        <td><input  id="r3k1" type="number" value="" maxlength="1"></td>
+        <td><input  id="r3k2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r3k3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r3k4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r3k5" type="number" value="" maxlength="1"></td>
+        <td><input  id="r3k6" type="number" value="" maxlength="1"></td>
+        <td><input  id="r3k7" type="number" value="" maxlength="1"></td>
+        <td><input  id="r3k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="r4k0" type="number" value="" maxlength="1"></td>
+        <td><input  id="r4k1" type="number" value="" maxlength="1"></td>
+        <td><input  id="r4k2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r4k3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r4k4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r4k5" type="number" value="" maxlength="1"></td>
+        <td><input  id="r4k6" type="number" value="" maxlength="1"></td>
+        <td><input  id="r4k7" type="number" value="" maxlength="1"></td>
+        <td><input  id="r4k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input  id="r5k0" type="number" value="" maxlength="1"></td>
+        <td><input  id="r5k1" type="number" value="" maxlength="1"></td>
+        <td><input  id="r5k2" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r5k3" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r5k4" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r5k5" type="number" value="" maxlength="1"></td>
+        <td><input  id="r5k6" type="number" value="" maxlength="1"></td>
+        <td><input  id="r5k7" type="number" value="" maxlength="1"></td>
+        <td><input  id="r5k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="r6k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r6k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r6k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r6k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r6k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r6k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r6k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r6k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r6k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="r7k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r7k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r7k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r7k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r7k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r7k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r7k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r7k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r7k8" type="number" value="" maxlength="1"></td>
+    </tr>
+    <tr>
+        <td><input class="first" id="r8k0" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r8k1" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r8k2" type="number" value="" maxlength="1"></td>
+        <td><input id="r8k3" type="number" value="" maxlength="1"></td>
+        <td><input id="r8k4" type="number" value="" maxlength="1"></td>
+        <td><input id="r8k5" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r8k6" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r8k7" type="number" value="" maxlength="1"></td>
+        <td><input class="first" id="r8k8" type="number" value="" maxlength="1"></td>
+    </tr>
+</table>
+         
+<button onclick="sudokuSM()" class="bu">Finish Game</button>
+<button onclick="news()" class="bu">New game</button>
+    </div>
+   
+   
+
+     <script src='suduko-h.js'></script>
+</body>
+</html>
